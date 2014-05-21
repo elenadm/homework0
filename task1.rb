@@ -16,10 +16,9 @@ end
 # For an array with just one element,
 # it should return that element.
 def max_2_sum(array)
-  @array=array
-  res= @array.max.to_i
-  (@array.delete(@array.max))
-  res+=@array.max.to_i
+  res= array.max.to_i
+  (array.delete(array.max))
+  res+=array.max.to_i
 end
 
 # DIFFICULT
