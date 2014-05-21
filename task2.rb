@@ -17,9 +17,9 @@ def starts_with_vowel?(str)
     true
   else
     false
+  end
 end
-end
-puts starts_with_vowel?('bar')
+
 # Takes a string
 # and returns true if the string represents a binary number
 # that is a multiple of 4.
