@@ -2,9 +2,12 @@
 # and returns the sum of its elements.
 # For an empty array it should return zero.
 def sum(array)
-  res = []
-  array.each { |a| res += [a] }
-  res
+  array.reduce(0, :+)
+=begin
+  res =0
+  array.each { |a| res += a }
+  res.to_i
+=end
 end
 
 # Takes an array of integers as an argument
@@ -13,7 +16,10 @@ end
 # For an array with just one element,
 # it should return that element.
 def max_2_sum(array)
-  raise "Not yet implemented"
+  @array=array
+  res= @array.max.to_i
+  (@array.delete(@array.max))
+  res+=@array.max.to_i
 end
 
 # DIFFICULT
@@ -25,3 +31,4 @@ end
 def sum_to_n?(array, n)
   raise "Not yet implemented"
 end
+
