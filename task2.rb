@@ -12,15 +12,14 @@ end
 # (For our purposes, a vowel is any of the A, E, I, O, U)
 # NOTE: be sure it works for both upper and lower case and for nonletters!
 def starts_with_vowel?(str)
-  @str = str.capitalize
-  if @str == A
-  elsif @str == E
-  elsif @str == I
-  elsif @str == O
-  elsif @str == U
-  end
+  @str= str.capitalize
+  if @str[0] == 'A' or @str[0] == 'E' or @str[0] == 'I' or @str[0] == 'O' or @str[0] == 'U'
+    true
+  else
+    false
 end
-
+end
+puts starts_with_vowel?('bar')
 # Takes a string
 # and returns true if the string represents a binary number
 # that is a multiple of 4.
