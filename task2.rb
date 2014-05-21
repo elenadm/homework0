@@ -2,8 +2,7 @@
 # and returns the string "Hello, "
 # concatenated with the name.
 def hello(name)
-  @name = name
-  "Hello, " + @name
+  "Hello, " + name
 end
 
 # Takes a string
@@ -13,11 +12,7 @@ end
 # NOTE: be sure it works for both upper and lower case and for nonletters!
 def starts_with_vowel?(str)
   @str= str.capitalize
-  if @str[0] == 'A' or @str[0] == 'E' or @str[0] == 'I' or @str[0] == 'O' or @str[0] == 'U'
-    true
-  else
-    false
-  end
+  (@str[0] == 'A' or @str[0] == 'E' or @str[0] == 'I' or @str[0] == 'O' or @str[0] == 'U') ? true : false
 end
 
 # Takes a string
@@ -25,5 +20,24 @@ end
 # that is a multiple of 4.
 # NOTE: be sure it returns false if the string is not a valid binary number!
 def binary_multiple_of_4?(str)
-  raise "Not yet implemented"
+=begin
+  @str=[]
+ puts  @str.class
+  @str=Array(str)
+  puts  @str.class
+@str.each {|e| if e==0 or e==1; than e else break end}
+  puts @str[0]
+  puts @str.class
+
+  res=0
+  @str.each { |e| res+=e*2**index }
+ # @str.each_with_index { |e, i| res+=e*2**i }
+  if res%4==0
+    true
+    else false
+    end
+  puts res
+=end
+
 end
+#binary_multiple_of_4?('1' '2' '3')
