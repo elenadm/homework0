@@ -20,8 +20,8 @@ class BookInStock
   def initialize (isbn, price)
     @isbn = isbn.to_s
     @price = price.to_f
-    raise ArgumentError, "ArgumentError" if @isbn == nil or @isbn == ''
-    raise ArgumentError, "ArgumentError" if @price <=0 or @price == nil
+    raise ArgumentError, "isbn is nil or empty" if @isbn == nil or @isbn == ''
+    raise ArgumentError, "price is less or equals 0 or nil" if @price <=0 or @price == nil
   end
 
   attr_accessor :isbn, :price
