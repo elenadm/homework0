@@ -20,24 +20,15 @@ end
 # that is a multiple of 4.
 # NOTE: be sure it returns false if the string is not a valid binary number!
 def binary_multiple_of_4?(str)
-=begin
-  @str=[]
- puts  @str.class
-  @str=Array(str)
-  puts  @str.class
-@str.each {|e| if e==0 or e==1; than e else break end}
-  puts @str[0]
-  puts @str.class
-
-  res=0
-  @str.each { |e| res+=e*2**index }
- # @str.each_with_index { |e, i| res+=e*2**i }
-  if res%4==0
-    true
-    else false
-    end
-  puts res
-=end
-
+  if str!=''
+    str.each_char { |e|
+      if e!=0.to_s and e!=1.to_s
+        return false
+      end }
+    str=Integer('0b'+str)
+    str%4==0
+  else
+    false
+  end
 end
-#binary_multiple_of_4?('1' '2' '3')
+
