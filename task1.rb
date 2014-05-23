@@ -28,6 +28,16 @@ end
 # if any two elements in the array of integers sum to n.
 # An empty array should sum to zero by definition.
 def sum_to_n?(array, n)
-  raise "Not yet implemented"
+  if array.empty? and n==0 or (array.size==1 and array[0] == n)
+  return true
 end
+a=array.combination(2).to_a
+a.map! { |row| row.reduce(:+) }
+a.each { |e|
+  if e==n
+    return true
+  end }
+  false
+  end
+
 
